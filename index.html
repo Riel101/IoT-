@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weighing Scale Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>IoT Weighing Scale Dashboard</h1>
+  </header>
+  <main>
+    <section id="current-weight">
+      <h2>Current Weight</h2>
+      <p id="weight-value">Loading...</p>
+    </section>
+    <section id="currency-value">
+      <h2>Currency Equivalent</h2>
+      <p id="currency">Loading...</p>
+    </section>
+    <section id="history">
+      <h2>Weight and Currency History</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Weight (kg)</th>
+            <th>Currency (USD)</th>
+          </tr>
+        </thead>
+        <tbody id="history-data">
+          <!-- Rows will be dynamically added -->
+        </tbody>
+      </table>
+    </section>
+    <section id="graph">
+      <h2>Graph: Weight Over Time</h2>
+      <canvas id="weight-chart"></canvas>
+    </section>
+  </main>
+  <footer>
+    <p>Powered by ESP32</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
